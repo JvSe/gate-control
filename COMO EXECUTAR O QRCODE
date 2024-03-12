@@ -1,0 +1,48 @@
+// COMO EXECUTAR O QRCODE.
+
+// const generateQrCode = async () => {
+//     const data = {
+//       ivd: voucherCreated.id,
+//       nvd: voucherCreated.numero,
+//       evd: voucherCreated.exercicio,
+//       div: voucherCreated.dataPrevistaVisita,
+//       dfv: voucherCreated.dataPrevistaFinalVisita,
+//       ipa: null,
+//       qtt: dependents.length + 1,
+//       lrv: voucherCreated.listAtrativoTuristico.map((atrativo: any) => {
+//         return {
+//           iva: atrativo.id,
+//           iat: atrativo.idAtrativo,
+//           duv: atrativo.dataPrevistaVisita,
+//           tdd: atrativo.periodo, // tdd - turno do dia
+//         };
+//       }),
+//       newSystem: orgao.id === 1,
+//     };
+
+//     let msgEncode = compress(JSON.stringify(data));
+//     await QrCode.toDataURL(JSON.stringify(msgEncode), {}).then(async (url) => {
+//       // refImage.current!.src = url
+//       setUrlImageQrCode(url);
+
+//       const blob = await pdf(
+//         <VoucherPDF
+//           urlImageQrCode={url}
+//           attractivies={attractivies}
+//           tourist={tourist! as any}
+//           dependents={dependents as any}
+//           valuesVoucher={valuesVoucher as any}
+//           voucherCreated={voucherCreated}
+//           orgao={orgao}
+//         />
+//       ).toBlob();
+//       setPdfInBlob(blob);
+//       const reader = new FileReader();
+//       reader.onloadend = () => {
+//         //@ts-ignore
+//         const base64Aux = reader.result.split(",")[1];
+//         setBase64(base64Aux);
+//       };
+//       reader.readAsDataURL(blob);
+//     });
+//   };
