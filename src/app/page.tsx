@@ -1,3 +1,4 @@
+import { AddEntrance } from "@/components/shared/add-entrance";
 import { SideBar } from "@/components/shared/sidebar";
 import { TableGeneral } from "@/components/tables/table-general";
 import { ButtonToggleTheme } from "@/components/toggle-theme";
@@ -9,7 +10,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Bell, Plus } from "lucide-react";
+import { Bell } from "lucide-react";
 
 export default function Home() {
   return (
@@ -31,18 +32,7 @@ export default function Home() {
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
-            <TooltipProvider delayDuration={100}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button size="clean" className="p-2 rounded-full">
-                    <Plus />
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Cadastrar uma nova entrada</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+            <AddEntrance />
           </div>
         </div>
         <Separator />
